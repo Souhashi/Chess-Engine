@@ -39,7 +39,7 @@ namespace Photon.Pun.Demo.PunBasics
         {
             PlayerPrefs.DeleteAll();
             Debug.Log("Connecting to Photon Network");
-            roomJoinUI.SetActive(false);
+            
             buttonLoadArena.SetActive(false);
 
             ConnectToPhoton();
@@ -99,7 +99,7 @@ namespace Photon.Pun.Demo.PunBasics
             base.OnConnected();
             connectionStatus.text = "Connected to Photon";
             connectionStatus.color = Color.green;
-            roomJoinUI.SetActive(true);
+            
             buttonLoadArena.SetActive(false);
         }
 
@@ -108,7 +108,7 @@ namespace Photon.Pun.Demo.PunBasics
             base.OnDisconnected(cause);
             isConnecting = false;
             controlPanel.SetActive(true);
-            Debug.LogError("Disconnected. Please check your Internet connection");
+            Debug.Log("Disconnected. Please check your Internet connection");
         }
 
         public override void OnJoinedRoom()

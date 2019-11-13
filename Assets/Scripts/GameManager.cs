@@ -84,6 +84,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    GameObject FindGameObject(string name)
+    {
+        foreach (GameObject piece in Allpieces)
+        {
+            if (piece.name == name)
+            {
+                return piece;
+            }
+        }
+        return null;
+    }
+
     public void UpdatePieceGlobally(Vector3 np, string name)
     {
         PhotonView photonView = PhotonView.Get(this);
@@ -94,7 +106,7 @@ public class GameManager : MonoBehaviour
     [PunRPC]
     void SetPiece(Vector3 newpos, string name)
     {
-        GameObject piece = GameObject.Find(name);
+        GameObject piece = FindGameObject(name);
         Vector3 newp = new Vector3(newpos.x, piece.transform.position.y, newpos.z);
         piece.transform.position = newp;
     }
@@ -118,7 +130,7 @@ public class GameManager : MonoBehaviour
     [PunRPC]
     void RemovePieceFromList(string name)
     {
-        GameObject piece = GameObject.Find(name);
+        GameObject piece = FindGameObject(name);
         Allpieces.Remove(piece);
     }
     [PunRPC]
@@ -210,12 +222,12 @@ public class GameManager : MonoBehaviour
         switch (current_player)
         {
             case Player.Black:
-                GameObject piece = GameObject.Find(name);
+                GameObject piece = FindGameObject(name);
                 wcaptured_pieces.Add(piece);
                 piece.transform.position = new Vector3(positions_white[wcaptured_pieces.Count - 1].x, piece.transform.position.y, positions_white[wcaptured_pieces.Count - 1].z);
                 break;
             case Player.White:
-                GameObject wpiece = GameObject.Find(name);
+                GameObject wpiece = FindGameObject(name);
                 bcaptured_pieces.Add(wpiece);
                 wpiece.transform.position = new Vector3(positions_black[bcaptured_pieces.Count - 1].x, wpiece.transform.position.y, positions_black[bcaptured_pieces.Count - 1].z);
                 break;
@@ -231,7 +243,7 @@ public class GameManager : MonoBehaviour
     [PunRPC]
     void UpdateNumOfTurns(string name)
     {
-        GameObject piece = GameObject.Find(name);
+        GameObject piece = FindGameObject(name);
         Piece p = piece.GetComponent<Piece>();
         p.num_of_moves++;
     }
@@ -337,13 +349,18 @@ public class GameManager : MonoBehaviour
                         if (p != null)
                         {
                             if (p.EnPassantLeft)
-                            { p.CanEnPassantLeft = false; }
+                            { p.CanEnPassantLeft = false;
+                              UpdateEnPassantStatusGlobal(piece.name, false, 3);
+                            }
                             if (p.EnPassantRight)
-                            { p.CanEnPassantRight = false; }
+                            { p.CanEnPassantRight = false;
+                              UpdateEnPassantStatusGlobal(piece.name, false, 4);
+                            }
                             if (p.EnPassantLeft && p.EnPassantRight)
                             {
                                 p.CanEnPassantRight = false;
                                 p.CanEnPassantLeft = false;
+                                UpdateEnPassantStatusGlobal(piece.name, false, 5);
                             }
                         }
                     }
@@ -362,13 +379,18 @@ public class GameManager : MonoBehaviour
                             if (p.pColor == Piece.Color.White && p.piecetype == Piece.Pieces.Peon)
                             {
                                 if (p.EnPassantLeft)
-                                { p.CanEnPassantLeft = false; }
+                                { p.CanEnPassantLeft = false;
+                                  UpdateEnPassantStatusGlobal(piece.name, false, 3);
+                                }
                                 if (p.EnPassantRight)
-                                { p.CanEnPassantRight = false; }
+                                { p.CanEnPassantRight = false;
+                                  UpdateEnPassantStatusGlobal(piece.name, false, 4);
+                                }
                                 if (p.EnPassantLeft && p.EnPassantRight)
                                 {
                                     p.CanEnPassantRight = false;
                                     p.CanEnPassantLeft = false;
+                                    UpdateEnPassantStatusGlobal(piece.name, false, 5);
                                 }
                             }
                         }
@@ -409,7 +431,7 @@ public class GameManager : MonoBehaviour
                                             
                                                 p.EnPassantLeft = true;
                                                 p.num_of_turns = 1;
-                                            
+                                                UpdateEnPassantStatusGlobal(piece.name, true, 1);
                                            
                                         }
 
@@ -427,7 +449,8 @@ public class GameManager : MonoBehaviour
                                             
                                                 p.EnPassantRight = true;
                                                 p.num_of_turns = 1;
-                                           
+                                                UpdateEnPassantStatusGlobal(piece.name, true, 2);
+
                                         }
 
                                     }
@@ -466,7 +489,7 @@ public class GameManager : MonoBehaviour
                                            
                                                 p.EnPassantLeft = true;
                                                 p.num_of_turns = 1;
-                                            
+                                                UpdateEnPassantStatusGlobal(piece.name, true, 1);
                                         }
 
                                     }
@@ -483,7 +506,7 @@ public class GameManager : MonoBehaviour
                                             
                                                 p.EnPassantRight = true;
                                                 p.num_of_turns = 1;
-                                            
+                                                UpdateEnPassantStatusGlobal(piece.name, true, 2);
                                         }
 
                                     }
@@ -545,7 +568,7 @@ public class GameManager : MonoBehaviour
     [PunRPC]
     void AddPiece(string name)
     {
-        GameObject piece = GameObject.Find(name);
+        GameObject piece = FindGameObject(name);
         Allpieces.Add(piece);
     }
 
@@ -577,13 +600,39 @@ public class GameManager : MonoBehaviour
     [PunRPC]
     void SetCurrentPiece(string name)
     {
-        GameObject piece = GameObject.Find(name);
+        GameObject piece = FindGameObject(name);
         currentPiece = piece;
     }
     [PunRPC]
     void DestroyPiece()
     {
         Destroy(currentPiece);
+    }
+    [PunRPC]
+    void UpdateEnPassantStatus(string name, bool status, int state)
+    {
+        GameObject peon = FindGameObject(name);
+        Piece _peonpiece = GetComponent<Piece>();
+        switch (state)
+        {
+            case 1:
+                _peonpiece.EnPassantLeft = status;
+                break;
+            case 2:
+                _peonpiece.EnPassantRight = status;
+                break;
+            case 3:
+                _peonpiece.CanEnPassantLeft = status;
+                break;
+            case 4:
+                _peonpiece.CanEnPassantRight = status;
+                break;
+            case 5:
+                _peonpiece.CanEnPassantRight = status;
+                _peonpiece.CanEnPassantLeft = status;
+                break;
+        }
+        
     }
 
     void DestroySceneObject()
@@ -599,6 +648,11 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void UpdateEnPassantStatusGlobal(string name, bool status, int state)
+    {
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("UpdateEnPassantStatus", RpcTarget.All, name, status, state);
+    }
     void AddPieceGlobally(string name)
     {
         PhotonView photonView = PhotonView.Get(this);
@@ -891,6 +945,7 @@ public class GameManager : MonoBehaviour
 
         }
     }
+
     [PunRPC]
     void SetCheck(bool c)
     {

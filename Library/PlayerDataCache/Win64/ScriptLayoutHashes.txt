@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/SOUHASHI/Documents/ChessBuild/ChessEngine.exe
+C:/Users/Andre/Documents/ChessBuild/ChessEngine.exe
 SceneListBegin?
 Assets/Scenes/Launcher.unity
 Assets/Scenes/ChessArena.unity
@@ -206,6 +206,7 @@ a53651ee3996fbba20dfe0fce02f0b23 Unity.Postprocessing.Runtime.dll:UnityEngine.Re
 d329540117e6b6c523bded68046af505 PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo.Cockpit.PropertyListenerBase
 cba6cca6bb3290c4c00d709cf63843db PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo.Cockpit.BackgroundTimeOutField
 c656dcc13ae391b68d594cc8f9c590b0 PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo.Cockpit.CountOfPlayersInRoomProperty
+afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.CameraFreeMove
 3dbccc5793489caad80e37a33f1d2d30 PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo.Cockpit.StringInputField
 4fdfe530ffd5f502ce72adb104fc64e2 PhotonUnityNetworking.Utilities.dll:Photon.Pun.UtilityScripts.OnClickDestroy
 c656dcc13ae391b68d594cc8f9c590b0 PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo.Cockpit.CurrentRoomIsVisibleProperty
@@ -329,4 +330,3 @@ c8283c7732e3b6aa70d28f1fed4430ca PhotonUnityNetworking.Utilities.dll:Photon.Pun.
 f07d654754d37f82934d9057c671e9cc PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo.Cockpit.Forms.UserIdUiForm
 c656dcc13ae391b68d594cc8f9c590b0 PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo.Cockpit.CountOfRoomsProperty
 f0c4eb24258257daca58a9939f0894d2 PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo.Asteroids.LobbyTopPanel
-afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.CameraFreeMove

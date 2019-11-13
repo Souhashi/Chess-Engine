@@ -47,5 +47,6 @@ MonoBehaviour:
   - SetCheck
   - UpdateNumOfTurns
   - SetGuiText
+  - UpdateEnPassantStatus
   DisableAutoOpenWizard: 1
   ShowSettings: 0
