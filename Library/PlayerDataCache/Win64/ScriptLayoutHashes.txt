@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Andre/Documents/ChessBuild/ChessEngine.exe
+C:/Users/SOUHASHI/Documents/ChessBuild/ChessEngine.exe
 SceneListBegin?
 Assets/Scenes/Launcher.unity
 Assets/Scenes/ChessArena.unity
@@ -185,6 +185,7 @@ f941c3a384168571b7d90f58ec4986bc PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Photon.Chat.UtilityScripts.EventSystemSpawner
 57d2b3ca58a430f7cf319bb757c1f0f5 PhotonUnityNetworking.Utilities.dll:Photon.Pun.UtilityScripts.OnClickInstantiate
+56dfad5d8c235cbd642d011531efe4cc Assembly-CSharp.dll:.PieceMovement
 c656dcc13ae391b68d594cc8f9c590b0 PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo.Cockpit.CloudRegionProperty
 ee84478990d29c6d64a8d3003b44725c PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo.Asteroids.PlayerOverviewPanel
 7602c8d40ade510f4c0e781c7062b246 Assembly-CSharp.dll:.ChannelSelector

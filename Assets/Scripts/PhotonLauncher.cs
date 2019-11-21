@@ -39,7 +39,7 @@ namespace Photon.Pun.Demo.PunBasics
         {
             PlayerPrefs.DeleteAll();
             Debug.Log("Connecting to Photon Network");
-            
+           
             buttonLoadArena.SetActive(false);
 
             ConnectToPhoton();
@@ -108,7 +108,7 @@ namespace Photon.Pun.Demo.PunBasics
             base.OnDisconnected(cause);
             isConnecting = false;
             controlPanel.SetActive(true);
-            Debug.Log("Disconnected. Please check your Internet connection");
+            Debug.LogError("Disconnected. Please check your Internet connection");
         }
 
         public override void OnJoinedRoom()
