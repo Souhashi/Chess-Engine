@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -407,7 +407,7 @@ PrefabInstance:
     - target: {fileID: 3982326173685834685, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_Name
-      value: wp1
+      value: wp8
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -447,7 +447,7 @@ PrefabInstance:
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 66981563}
   - component: {fileID: 66981562}
   m_Layer: 5
-  m_Name: Image (18)
+  m_Name: wb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -501,7 +501,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 18
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -767,7 +767,7 @@ PrefabInstance:
     - target: {fileID: 400925057477292337, guid: e581e5abb93ae5f488f904393de77bba,
         type: 3}
       propertyPath: m_Name
-      value: tower-black (1)
+      value: br
       objectReference: {fileID: 0}
     - target: {fileID: 400925057477292337, guid: e581e5abb93ae5f488f904393de77bba,
         type: 3}
@@ -1041,7 +1041,7 @@ PrefabInstance:
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
       propertyPath: m_Name
-      value: peon-black (2)
+      value: bp6
       objectReference: {fileID: 0}
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
@@ -1133,7 +1133,7 @@ GameObject:
   - component: {fileID: 133286391}
   - component: {fileID: 133286390}
   m_Layer: 5
-  m_Name: Image (9)
+  m_Name: bp2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1178,7 +1178,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0afeadb740c8a30498bc2dddb3392c60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5f852d15af462d4c99de7ed1c1b9bf4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1361,7 +1361,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &182717923
 GameObject:
@@ -1694,7 +1694,7 @@ GameObject:
   - component: {fileID: 196845450}
   - component: {fileID: 196845449}
   m_Layer: 5
-  m_Name: Image (16)
+  m_Name: wr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1712,7 +1712,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 16
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1911,7 +1911,7 @@ GameObject:
   - component: {fileID: 212186084}
   - component: {fileID: 212186083}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Pieces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1931,8 +1931,8 @@ RectTransform:
   - {fileID: 1777932467}
   - {fileID: 368199054}
   - {fileID: 1074983916}
-  - {fileID: 274497290}
   - {fileID: 541616220}
+  - {fileID: 274497290}
   - {fileID: 2108851170}
   - {fileID: 1253493459}
   - {fileID: 828544191}
@@ -1944,14 +1944,6 @@ RectTransform:
   - {fileID: 2128521165}
   - {fileID: 1093085067}
   - {fileID: 1891482128}
-  - {fileID: 196845448}
-  - {fileID: 406066060}
-  - {fileID: 66981561}
-  - {fileID: 1834927925}
-  - {fileID: 528050869}
-  - {fileID: 840416602}
-  - {fileID: 1273499109}
-  - {fileID: 1376751956}
   - {fileID: 959710578}
   - {fileID: 355007470}
   - {fileID: 1482950157}
@@ -1960,6 +1952,14 @@ RectTransform:
   - {fileID: 1147166453}
   - {fileID: 1905307999}
   - {fileID: 256141367}
+  - {fileID: 196845448}
+  - {fileID: 406066060}
+  - {fileID: 66981561}
+  - {fileID: 528050869}
+  - {fileID: 1834927925}
+  - {fileID: 840416602}
+  - {fileID: 1273499109}
+  - {fileID: 1376751956}
   m_Father: {fileID: 1854515063}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2240,7 +2240,7 @@ GameObject:
   - component: {fileID: 256141369}
   - component: {fileID: 256141368}
   m_Layer: 5
-  m_Name: Image (31)
+  m_Name: wp8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2258,7 +2258,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 31
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2285,7 +2285,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8360a1a6efe829747893dadd9a20acda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28e5b30a9ff782c4290eff07235cc9ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2392,7 +2392,7 @@ PrefabInstance:
     - target: {fileID: 3982326173685834685, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_Name
-      value: wp2
+      value: wp7
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -2432,7 +2432,7 @@ PrefabInstance:
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -2468,7 +2468,7 @@ GameObject:
   - component: {fileID: 274497292}
   - component: {fileID: 274497291}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: bk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2486,11 +2486,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 258, y: -55}
+  m_AnchoredPosition: {x: 329, y: -55}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &274497291
@@ -2683,7 +2683,7 @@ PrefabInstance:
     - target: {fileID: 3982326173685834685, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_Name
-      value: wp4
+      value: wp5
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -2723,7 +2723,7 @@ PrefabInstance:
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -2914,7 +2914,7 @@ GameObject:
   - component: {fileID: 355007472}
   - component: {fileID: 355007471}
   m_Layer: 5
-  m_Name: Image (25)
+  m_Name: wp2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2932,7 +2932,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 25
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2959,7 +2959,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8360a1a6efe829747893dadd9a20acda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28e5b30a9ff782c4290eff07235cc9ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3136,7 +3136,7 @@ GameObject:
   - component: {fileID: 368199056}
   - component: {fileID: 368199055}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: bn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3395,7 +3395,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.58
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -3437,7 +3437,7 @@ RectTransform:
   - {fileID: 602925508}
   - {fileID: 1601934026}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3468,7 +3468,7 @@ GameObject:
   - component: {fileID: 406066062}
   - component: {fileID: 406066061}
   m_Layer: 5
-  m_Name: Image (17)
+  m_Name: wn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3486,7 +3486,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 17
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -4265,7 +4265,7 @@ GameObject:
   - component: {fileID: 528050871}
   - component: {fileID: 528050870}
   m_Layer: 5
-  m_Name: Image (20)
+  m_Name: wq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4283,11 +4283,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 20
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 329, y: -544}
+  m_AnchoredPosition: {x: 258, y: -544}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &528050870
@@ -4339,7 +4339,7 @@ GameObject:
   - component: {fileID: 541616222}
   - component: {fileID: 541616221}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: bq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4357,11 +4357,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 328, y: -55}
+  m_AnchoredPosition: {x: 258, y: -55}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &541616221
@@ -4720,7 +4720,7 @@ PrefabInstance:
     - target: {fileID: 6315930024276593744, guid: 7e39557669d797d468307bc6a945779f,
         type: 3}
       propertyPath: m_Name
-      value: knight-white (1)
+      value: wn
       objectReference: {fileID: 0}
     - target: {fileID: 6315930024276593744, guid: 7e39557669d797d468307bc6a945779f,
         type: 3}
@@ -4949,7 +4949,7 @@ GameObject:
   - component: {fileID: 602925510}
   - component: {fileID: 602925509}
   m_Layer: 5
-  m_Name: Panel (2)
+  m_Name: CapPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5815,7 +5815,7 @@ GameObject:
   - component: {fileID: 772368241}
   - component: {fileID: 772368240}
   m_Layer: 5
-  m_Name: Image (12)
+  m_Name: bp5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5860,7 +5860,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0afeadb740c8a30498bc2dddb3392c60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5f852d15af462d4c99de7ed1c1b9bf4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6030,7 +6030,7 @@ PrefabInstance:
     - target: {fileID: 3982326173685834685, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_Name
-      value: wp3
+      value: wp6
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -6070,7 +6070,7 @@ PrefabInstance:
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -6104,7 +6104,7 @@ PrefabInstance:
     - target: {fileID: 1768856616518264223, guid: d50a6a87cb9c467458f5f2fb8f1432b3,
         type: 3}
       propertyPath: m_Name
-      value: bishop-white (1)
+      value: wb
       objectReference: {fileID: 0}
     - target: {fileID: 1768856616518264223, guid: d50a6a87cb9c467458f5f2fb8f1432b3,
         type: 3}
@@ -6191,7 +6191,7 @@ GameObject:
   - component: {fileID: 828544193}
   - component: {fileID: 828544192}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: br1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6271,7 +6271,7 @@ GameObject:
   - component: {fileID: 840416604}
   - component: {fileID: 840416603}
   m_Layer: 5
-  m_Name: Image (21)
+  m_Name: wb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6289,7 +6289,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 21
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -6343,7 +6343,7 @@ PrefabInstance:
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
       propertyPath: m_Name
-      value: peon-black (4)
+      value: bp4
       objectReference: {fileID: 0}
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
@@ -6655,7 +6655,7 @@ PrefabInstance:
     - target: {fileID: 3982326173685834685, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_Name
-      value: wp7
+      value: wp2
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -6695,7 +6695,7 @@ PrefabInstance:
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -6789,7 +6789,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894651924
 GameObject:
@@ -6913,7 +6913,7 @@ GameObject:
   - component: {fileID: 922512329}
   - component: {fileID: 922512328}
   m_Layer: 5
-  m_Name: Image (11)
+  m_Name: bp4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6958,7 +6958,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0afeadb740c8a30498bc2dddb3392c60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5f852d15af462d4c99de7ed1c1b9bf4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7061,7 +7061,7 @@ GameObject:
   - component: {fileID: 959710580}
   - component: {fileID: 959710579}
   m_Layer: 5
-  m_Name: Image (24)
+  m_Name: wp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7079,7 +7079,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 24
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -7106,7 +7106,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8360a1a6efe829747893dadd9a20acda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28e5b30a9ff782c4290eff07235cc9ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7554,7 +7554,7 @@ GameObject:
   - component: {fileID: 1020280810}
   - component: {fileID: 1020280809}
   m_Layer: 5
-  m_Name: Image (28)
+  m_Name: wp5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7572,7 +7572,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 28
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -7599,7 +7599,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8360a1a6efe829747893dadd9a20acda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28e5b30a9ff782c4290eff07235cc9ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7850,7 +7850,7 @@ PrefabInstance:
     - target: {fileID: 3118561045520399462, guid: 110bb58fb30b070428a51854af99f0ad,
         type: 3}
       propertyPath: m_Name
-      value: tower-white (1)
+      value: wr1
       objectReference: {fileID: 0}
     - target: {fileID: 3118561045520399462, guid: 110bb58fb30b070428a51854af99f0ad,
         type: 3}
@@ -8069,7 +8069,7 @@ GameObject:
   - component: {fileID: 1074983918}
   - component: {fileID: 1074983917}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: bb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8212,7 +8212,7 @@ GameObject:
   - component: {fileID: 1093085069}
   - component: {fileID: 1093085068}
   m_Layer: 5
-  m_Name: Image (14)
+  m_Name: bp7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8257,7 +8257,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0afeadb740c8a30498bc2dddb3392c60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5f852d15af462d4c99de7ed1c1b9bf4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8434,7 +8434,7 @@ GameObject:
   - component: {fileID: 1147166455}
   - component: {fileID: 1147166454}
   m_Layer: 5
-  m_Name: Image (29)
+  m_Name: wp6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8452,7 +8452,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 29
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -8479,7 +8479,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8360a1a6efe829747893dadd9a20acda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28e5b30a9ff782c4290eff07235cc9ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8581,7 +8581,7 @@ PrefabInstance:
     - target: {fileID: 3982326173685834685, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_Name
-      value: wp8
+      value: wp1
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -8621,7 +8621,7 @@ PrefabInstance:
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -9239,7 +9239,7 @@ GameObject:
   - component: {fileID: 1253493461}
   - component: {fileID: 1253493460}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: bn1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9387,7 +9387,7 @@ GameObject:
   - component: {fileID: 1273499111}
   - component: {fileID: 1273499110}
   m_Layer: 5
-  m_Name: Image (22)
+  m_Name: wn1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9405,7 +9405,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 22
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -9857,7 +9857,7 @@ PrefabInstance:
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
       propertyPath: m_Name
-      value: peon-black (5)
+      value: bp3
       objectReference: {fileID: 0}
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
@@ -10015,7 +10015,7 @@ PrefabInstance:
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
       propertyPath: m_Name
-      value: peon-black (6)
+      value: bp2
       objectReference: {fileID: 0}
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
@@ -10168,7 +10168,7 @@ PrefabInstance:
     - target: {fileID: 3955681816692555287, guid: e33958edb25c00949ae610d634296122,
         type: 3}
       propertyPath: m_Name
-      value: bishop-black (1)
+      value: bb
       objectReference: {fileID: 0}
     - target: {fileID: 3955681816692555287, guid: e33958edb25c00949ae610d634296122,
         type: 3}
@@ -10254,7 +10254,7 @@ GameObject:
   - component: {fileID: 1376751958}
   - component: {fileID: 1376751957}
   m_Layer: 5
-  m_Name: Image (23)
+  m_Name: wr1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10272,7 +10272,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 23
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -10695,7 +10695,7 @@ GameObject:
   - component: {fileID: 1431134031}
   - component: {fileID: 1431134030}
   m_Layer: 5
-  m_Name: Image (10)
+  m_Name: bp3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10740,7 +10740,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0afeadb740c8a30498bc2dddb3392c60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5f852d15af462d4c99de7ed1c1b9bf4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10773,7 +10773,7 @@ PrefabInstance:
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
       propertyPath: m_Name
-      value: peon-black (7)
+      value: bp1
       objectReference: {fileID: 0}
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
@@ -11140,7 +11140,7 @@ GameObject:
   - component: {fileID: 1482950159}
   - component: {fileID: 1482950158}
   m_Layer: 5
-  m_Name: Image (26)
+  m_Name: wp3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11158,7 +11158,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 26
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -11185,7 +11185,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8360a1a6efe829747893dadd9a20acda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28e5b30a9ff782c4290eff07235cc9ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11358,7 +11358,7 @@ GameObject:
   - component: {fileID: 1533110817}
   - component: {fileID: 1533110816}
   m_Layer: 5
-  m_Name: Image (8)
+  m_Name: bp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11403,7 +11403,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0afeadb740c8a30498bc2dddb3392c60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5f852d15af462d4c99de7ed1c1b9bf4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11743,7 +11743,7 @@ Transform:
   - {fileID: 1992951525}
   - {fileID: 264992576}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1572657894
 MonoBehaviour:
@@ -11786,6 +11786,7 @@ MonoBehaviour:
   current_player: 0
   currentBoardStatus: 0
   currentPiece: {fileID: 0}
+  current_pos: 
   grid: {fileID: 1572657894}
   Allpieces: []
   black_pieces:
@@ -12133,7 +12134,7 @@ GameObject:
   - component: {fileID: 1587346942}
   - component: {fileID: 1587346941}
   m_Layer: 5
-  m_Name: Image (27)
+  m_Name: wp4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12151,7 +12152,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 27
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -12178,7 +12179,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8360a1a6efe829747893dadd9a20acda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28e5b30a9ff782c4290eff07235cc9ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12207,7 +12208,7 @@ GameObject:
   - component: {fileID: 1601934028}
   - component: {fileID: 1601934027}
   m_Layer: 5
-  m_Name: Panel (3)
+  m_Name: Status
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12445,7 +12446,7 @@ PrefabInstance:
     - target: {fileID: 3982326173685834685, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_Name
-      value: wp5
+      value: wp4
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -12485,7 +12486,7 @@ PrefabInstance:
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -12731,7 +12732,7 @@ PrefabInstance:
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
       propertyPath: m_Name
-      value: peon-black (3)
+      value: bp5
       objectReference: {fileID: 0}
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
@@ -12856,9 +12857,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.3
+    y: 0.2
     width: 0.7
-    height: 0.7
+    height: 0.8
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -12903,7 +12904,7 @@ PrefabInstance:
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
       propertyPath: m_Name
-      value: peon-black (1)
+      value: bp7
       objectReference: {fileID: 0}
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
@@ -13709,7 +13710,7 @@ GameObject:
   - component: {fileID: 1777932469}
   - component: {fileID: 1777932468}
   m_Layer: 5
-  m_Name: Image
+  m_Name: br
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14348,7 +14349,7 @@ GameObject:
   - component: {fileID: 1834927927}
   - component: {fileID: 1834927926}
   m_Layer: 5
-  m_Name: Image (19)
+  m_Name: wk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14366,11 +14367,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 19
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 258, y: -544}
+  m_AnchoredPosition: {x: 328, y: -544}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834927926
@@ -14570,6 +14571,7 @@ GameObject:
   - component: {fileID: 1854515063}
   - component: {fileID: 1854515065}
   - component: {fileID: 1854515064}
+  - component: {fileID: 1854515066}
   m_Layer: 5
   m_Name: Panel (1)
   m_TagString: Untagged
@@ -14635,6 +14637,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854515062}
   m_CullTransparentMesh: 0
+--- !u!114 &1854515066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854515062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 0
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  viewIdField: 33
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &1883729502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14645,7 +14669,7 @@ PrefabInstance:
     - target: {fileID: 3982326173685834685, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_Name
-      value: wp6
+      value: wp3
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -14685,7 +14709,7 @@ PrefabInstance:
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 3982326173686267805, guid: ada66ae07257ba7448b82ad0ab01f4ad,
         type: 3}
@@ -14929,7 +14953,7 @@ GameObject:
   - component: {fileID: 1891482130}
   - component: {fileID: 1891482129}
   m_Layer: 5
-  m_Name: Image (15)
+  m_Name: bp8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14974,7 +14998,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0afeadb740c8a30498bc2dddb3392c60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5f852d15af462d4c99de7ed1c1b9bf4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15015,7 +15039,7 @@ GameObject:
   - component: {fileID: 1905308001}
   - component: {fileID: 1905308000}
   m_Layer: 5
-  m_Name: Image (30)
+  m_Name: wp7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15033,7 +15057,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212186082}
-  m_RootOrder: 30
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -15060,7 +15084,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8360a1a6efe829747893dadd9a20acda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28e5b30a9ff782c4290eff07235cc9ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15781,7 +15805,7 @@ PrefabInstance:
     - target: {fileID: 819900491638469462, guid: bec3193c831cea043980af6e9ba87c38,
         type: 3}
       propertyPath: m_Name
-      value: knight-black (1)
+      value: bn
       objectReference: {fileID: 0}
     - target: {fileID: 819900491638469462, guid: bec3193c831cea043980af6e9ba87c38,
         type: 3}
@@ -16016,7 +16040,7 @@ GameObject:
   - component: {fileID: 2108851172}
   - component: {fileID: 2108851171}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: bb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16329,7 +16353,7 @@ GameObject:
   - component: {fileID: 2128521167}
   - component: {fileID: 2128521166}
   m_Layer: 5
-  m_Name: Image (13)
+  m_Name: bp6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16374,7 +16398,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0afeadb740c8a30498bc2dddb3392c60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5f852d15af462d4c99de7ed1c1b9bf4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16431,7 +16455,7 @@ PrefabInstance:
     - target: {fileID: 400925057477292337, guid: e581e5abb93ae5f488f904393de77bba,
         type: 3}
       propertyPath: m_Name
-      value: tower-black
+      value: br1
       objectReference: {fileID: 0}
     - target: {fileID: 400925057477292337, guid: e581e5abb93ae5f488f904393de77bba,
         type: 3}
@@ -16476,7 +16500,7 @@ PrefabInstance:
     - target: {fileID: 400925057477192977, guid: e581e5abb93ae5f488f904393de77bba,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400925057477192977, guid: e581e5abb93ae5f488f904393de77bba,
         type: 3}
@@ -16515,7 +16539,7 @@ PrefabInstance:
     - target: {fileID: 819900491638469462, guid: bec3193c831cea043980af6e9ba87c38,
         type: 3}
       propertyPath: m_Name
-      value: knight-black
+      value: bn1
       objectReference: {fileID: 0}
     - target: {fileID: 819900491638469462, guid: bec3193c831cea043980af6e9ba87c38,
         type: 3}
@@ -16560,7 +16584,7 @@ PrefabInstance:
     - target: {fileID: 819900491638042486, guid: bec3193c831cea043980af6e9ba87c38,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 819900491638042486, guid: bec3193c831cea043980af6e9ba87c38,
         type: 3}
@@ -16599,7 +16623,7 @@ PrefabInstance:
     - target: {fileID: 1768856616518264223, guid: d50a6a87cb9c467458f5f2fb8f1432b3,
         type: 3}
       propertyPath: m_Name
-      value: bishop-white
+      value: wb1
       objectReference: {fileID: 0}
     - target: {fileID: 1768856616518264223, guid: d50a6a87cb9c467458f5f2fb8f1432b3,
         type: 3}
@@ -16644,7 +16668,7 @@ PrefabInstance:
     - target: {fileID: 1768856616518302143, guid: d50a6a87cb9c467458f5f2fb8f1432b3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1768856616518302143, guid: d50a6a87cb9c467458f5f2fb8f1432b3,
         type: 3}
@@ -16678,7 +16702,7 @@ PrefabInstance:
     - target: {fileID: 3118561045520399462, guid: 110bb58fb30b070428a51854af99f0ad,
         type: 3}
       propertyPath: m_Name
-      value: tower-white
+      value: wr
       objectReference: {fileID: 0}
     - target: {fileID: 3118561045520399462, guid: 110bb58fb30b070428a51854af99f0ad,
         type: 3}
@@ -16723,7 +16747,7 @@ PrefabInstance:
     - target: {fileID: 3118561045520228422, guid: 110bb58fb30b070428a51854af99f0ad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3118561045520228422, guid: 110bb58fb30b070428a51854af99f0ad,
         type: 3}
@@ -16757,7 +16781,7 @@ PrefabInstance:
     - target: {fileID: 3955681816692555287, guid: e33958edb25c00949ae610d634296122,
         type: 3}
       propertyPath: m_Name
-      value: bishop-black
+      value: bb1
       objectReference: {fileID: 0}
     - target: {fileID: 3955681816692555287, guid: e33958edb25c00949ae610d634296122,
         type: 3}
@@ -16802,7 +16826,7 @@ PrefabInstance:
     - target: {fileID: 3955681816692253239, guid: e33958edb25c00949ae610d634296122,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3955681816692253239, guid: e33958edb25c00949ae610d634296122,
         type: 3}
@@ -16841,7 +16865,7 @@ PrefabInstance:
     - target: {fileID: 5121433875529182976, guid: 0d5706c4ae906954091b5f5231a9c1a8,
         type: 3}
       propertyPath: m_Name
-      value: queen-black
+      value: bq
       objectReference: {fileID: 0}
     - target: {fileID: 5121433875529182976, guid: 0d5706c4ae906954091b5f5231a9c1a8,
         type: 3}
@@ -16886,7 +16910,7 @@ PrefabInstance:
     - target: {fileID: 5121433875529478944, guid: 0d5706c4ae906954091b5f5231a9c1a8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5121433875529478944, guid: 0d5706c4ae906954091b5f5231a9c1a8,
         type: 3}
@@ -16925,7 +16949,7 @@ PrefabInstance:
     - target: {fileID: 5494608279134197311, guid: ad949d6f6829b78449ed121f3b86e664,
         type: 3}
       propertyPath: m_Name
-      value: queen-white
+      value: wq
       objectReference: {fileID: 0}
     - target: {fileID: 5494608279134197311, guid: ad949d6f6829b78449ed121f3b86e664,
         type: 3}
@@ -16970,7 +16994,7 @@ PrefabInstance:
     - target: {fileID: 5494608279133833759, guid: ad949d6f6829b78449ed121f3b86e664,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5494608279133833759, guid: ad949d6f6829b78449ed121f3b86e664,
         type: 3}
@@ -17004,7 +17028,7 @@ PrefabInstance:
     - target: {fileID: 5594327841943820311, guid: 7366cc262fe2c9d44b7f7bc4e75dc00b,
         type: 3}
       propertyPath: m_Name
-      value: king-black
+      value: bk
       objectReference: {fileID: 0}
     - target: {fileID: 5594327841943820311, guid: 7366cc262fe2c9d44b7f7bc4e75dc00b,
         type: 3}
@@ -17049,7 +17073,7 @@ PrefabInstance:
     - target: {fileID: 5594327841943847991, guid: 7366cc262fe2c9d44b7f7bc4e75dc00b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5594327841943847991, guid: 7366cc262fe2c9d44b7f7bc4e75dc00b,
         type: 3}
@@ -17083,7 +17107,7 @@ PrefabInstance:
     - target: {fileID: 6315930024276593744, guid: 7e39557669d797d468307bc6a945779f,
         type: 3}
       propertyPath: m_Name
-      value: knight-white
+      value: wn1
       objectReference: {fileID: 0}
     - target: {fileID: 6315930024276593744, guid: 7e39557669d797d468307bc6a945779f,
         type: 3}
@@ -17128,7 +17152,7 @@ PrefabInstance:
     - target: {fileID: 6315930024276693104, guid: 7e39557669d797d468307bc6a945779f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6315930024276693104, guid: 7e39557669d797d468307bc6a945779f,
         type: 3}
@@ -17162,7 +17186,7 @@ PrefabInstance:
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
       propertyPath: m_Name
-      value: peon-black
+      value: bp8
       objectReference: {fileID: 0}
     - target: {fileID: 6876125419604586926, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
@@ -17207,7 +17231,7 @@ PrefabInstance:
     - target: {fileID: 6876125419605011854, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6876125419605011854, guid: 6087b246afdc5ff4bb9620b625a39017,
         type: 3}
@@ -17246,7 +17270,7 @@ PrefabInstance:
     - target: {fileID: 6902830971033933321, guid: ca030c6ccfa01b64daca39e7049abbdd,
         type: 3}
       propertyPath: m_Name
-      value: king-white
+      value: wk
       objectReference: {fileID: 0}
     - target: {fileID: 6902830971033933321, guid: ca030c6ccfa01b64daca39e7049abbdd,
         type: 3}
@@ -17291,7 +17315,7 @@ PrefabInstance:
     - target: {fileID: 6902830971034094121, guid: ca030c6ccfa01b64daca39e7049abbdd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6902830971034094121, guid: ca030c6ccfa01b64daca39e7049abbdd,
         type: 3}
@@ -17395,7 +17419,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc57bf6da8daa5418a4ada6df9e9d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 8011625989340046779}
+  board: {fileID: 8011625989340046779}
+  pieces: {fileID: 212186082}
+  cappieces: {fileID: 602925508}
+  status: {fileID: 1601934026}
+  viewportwidth: 0.7
+  viewportheight: 0.8
 --- !u!224 &8011625989340046779
 RectTransform:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class PointToGrid : MonoBehaviour
     public GameObject m;
     Vector3 point;
     Vector3 move;
+    string tile_name;
     GameObject selectiontile;
     GameObject movetile;
     GameObject s;
@@ -18,6 +19,7 @@ public class PointToGrid : MonoBehaviour
     List<Vector3> positions;
     List<GameObject> movetiles;
     bool canCastle = true;
+    
     Camera camera;
     void Start()
     {
@@ -57,7 +59,7 @@ public class PointToGrid : MonoBehaviour
 
                     selectiontile.transform.position = point;
                     //Debug.Log(point);
-
+                    
                 }
                 else
                 {
@@ -113,8 +115,8 @@ public class PointToGrid : MonoBehaviour
             if (hit.collider != null)
             {
                 point = hit.collider.transform.position;
-                
-
+                tile_name = hit.collider.name;
+                GameManager.Instance.SetPosGlobal(tile_name);
                
 }
             
@@ -158,7 +160,7 @@ public class PointToGrid : MonoBehaviour
                 
                 positions = p.GetPiecePositions(point);
                 Debug.Log(positions.Count);
-                
+                Debug.Log(p.name);
                 DeactivateTiles();
                 if (p.piecetype == Piece.Pieces.Rook&& Input.GetKey(KeyCode.Q) && GameManager.Instance.CanCastle(s, point))
                 {
@@ -175,6 +177,7 @@ public class PointToGrid : MonoBehaviour
                 else
                 {
                     GameManager.Instance.UpdatePieceGlobally(point, s.name);
+                    PieceMovement.Instance.MoveImage(GameManager.Instance.currentPiece.name, tile_name);
                     
                     p.hasMovedBefore = true;
                 }

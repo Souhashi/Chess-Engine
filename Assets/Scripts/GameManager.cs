@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public Player current_player;
     public Status currentBoardStatus;
     public GameObject currentPiece;
+    public string current_pos;
     public Grid grid;
     GameObject[] allpieces;
     public List<GameObject> Allpieces;
@@ -89,6 +90,7 @@ public class GameManager : MonoBehaviour
         PhotonView photonView = PhotonView.Get(this);
         Debug.Log("PRC RUN");
         photonView.RPC("SetPiece", RpcTarget.All, np, name);
+        
     }
 
     [PunRPC]
@@ -97,6 +99,19 @@ public class GameManager : MonoBehaviour
         GameObject piece = GameObject.Find(name);
         Vector3 newp = new Vector3(newpos.x, piece.transform.position.y, newpos.z);
         piece.transform.position = newp;
+        PieceMovement.Instance.MoveImage(name, current_pos);
+    }
+
+    [PunRPC]
+    void Update2D(string name, string pos)
+    {
+        PieceMovement.Instance.MoveImage(name, pos);
+    }
+
+    [PunRPC]
+    void Delete2D(string name)
+    {
+        PieceMovement.Instance.DeleteImageWithName(name);
     }
 
     [PunRPC]
@@ -174,6 +189,18 @@ public class GameManager : MonoBehaviour
         photonView.RPC("UpdateCurrentPlayer", RpcTarget.All, cp);
     }
 
+    public void Set2DGlobal(string name, string position)
+    {
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("Update2D", RpcTarget.All, name, position);
+    }
+
+    public void Delete2DGlobal(string position)
+    {
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("Delete2D", RpcTarget.All, position);
+    }
+
     public void RemovePieceGlobally(string piece)
     {
         PhotonView photonView = PhotonView.Get(this);
@@ -246,11 +273,13 @@ public class GameManager : MonoBehaviour
                 GameObject piece = GameObject.Find(name);
                 wcaptured_pieces.Add(piece);
                 piece.transform.position = new Vector3(positions_white[wcaptured_pieces.Count - 1].x, piece.transform.position.y, positions_white[wcaptured_pieces.Count - 1].z);
+                PieceMovement.Instance.DeleteImage(current_pos);
                 break;
             case Player.White:
                 GameObject wpiece = GameObject.Find(name);
                 bcaptured_pieces.Add(wpiece);
                 wpiece.transform.position = new Vector3(positions_black[bcaptured_pieces.Count - 1].x, wpiece.transform.position.y, positions_black[bcaptured_pieces.Count - 1].z);
+                PieceMovement.Instance.DeleteImage(current_pos);
                 break;
         }
     }
@@ -312,6 +341,8 @@ public class GameManager : MonoBehaviour
                     GameObject enemy = GetPieceAtLocation(enemylocation);
                     RemovePieceGlobally(enemy.name);
                     CapturePieceGlobally(enemy.name);
+                    Delete2DGlobal(enemy.name);
+                    
                 }
                 if (p.EnPassantRight && upright.x == point.x && upright.z == point.z)
                 {
@@ -319,6 +350,7 @@ public class GameManager : MonoBehaviour
                     GameObject enemy = GetPieceAtLocation(enemylocation);
                     RemovePieceGlobally(enemy.name);
                     CapturePieceGlobally(enemy.name);
+                    Delete2DGlobal(enemy.name);
                 }
                 break;
             case Piece.Color.White:
@@ -330,6 +362,7 @@ public class GameManager : MonoBehaviour
                     GameObject enemy = GetPieceAtLocation(enemylocation);
                     RemovePieceGlobally(enemy.name);
                     CapturePieceGlobally(enemy.name);
+                    Delete2DGlobal(enemy.name);
                 }
                 if (p.EnPassantRight && wupright.x == point.x && wupright.z == point.z)
                 {
@@ -337,6 +370,7 @@ public class GameManager : MonoBehaviour
                     GameObject enemy = GetPieceAtLocation(enemylocation);
                     RemovePieceGlobally(enemy.name);
                     CapturePieceGlobally(enemy.name);
+                    Delete2DGlobal(enemy.name);
                 }
                 break;
         }
@@ -623,6 +657,12 @@ public class GameManager : MonoBehaviour
     }
 
     [PunRPC]
+    void SetNamePos(string name)
+    {
+        current_pos = name;
+    }
+
+    [PunRPC]
     void SetCurrentPiece(string name)
     {
         GameObject piece = GameObject.Find(name);
@@ -645,6 +685,12 @@ public class GameManager : MonoBehaviour
         PhotonView photonView = PhotonView.Get(this);
         photonView.RPC("SetCurrentPiece", RpcTarget.All, name);
 
+    }
+
+    public void SetPosGlobal(string name)
+    {
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("SetNamePos", RpcTarget.All, name);
     }
 
     void AddPieceGlobally(string name)
@@ -856,12 +902,14 @@ public class GameManager : MonoBehaviour
             Debug.Log("CastleK");
             UpdatePieceGlobally(castlemoveOO, p.name);
             UpdatePieceGlobally(castlemovekOO, p1.name);
+            Set2DGlobal(p1.name, "g1");
         }
         else if (rook.transform.position.x == 8 && castlemoveOOO.x == point.x && castlemoveOOO.z == point.z)
         {
             Debug.Log("CastleQ");
             UpdatePieceGlobally(castlemoveOOO, p.name);
             UpdatePieceGlobally(castlemovekOOO, p1.name);
+                    Set2DGlobal(p1.name, "c1");
         }
                 break;
             case Player.Black:
@@ -875,12 +923,14 @@ public class GameManager : MonoBehaviour
                     Debug.Log("CastleK");
                     UpdatePieceGlobally(castlemoveOO, p.name);
                     UpdatePieceGlobally(bcastlemovekOO, bp1.name);
+                    Set2DGlobal(bp1.name, "g8");
                 }
                 else if (rook.transform.position.x == 8 && castlemoveOOO.x == point.x && castlemoveOOO.z == point.z)
                 {
                     Debug.Log("CastleQ");
                     UpdatePieceGlobally(castlemoveOOO, p.name);
                     UpdatePieceGlobally(bcastlemovekOOO, bp1.name);
+                    Set2DGlobal(bp1.name, "c8");
                 }
                 break;
     }
