@@ -56,6 +56,7 @@ public class PieceMovement : MonoBehaviour
 
         
         transform.GetComponent<GridLayoutGroup>().cellSize = new Vector2(Mathf.Floor(cell_target_width), Mathf.Floor(cell_target_width));
+        cappieces.GetComponent<GridLayoutGroup>().cellSize = new Vector2(Mathf.Floor(cell_target_width), Mathf.Floor(cell_target_width));
 
         for (int i = 0; i < pieces.childCount; i++)
         {
@@ -122,6 +123,14 @@ public class PieceMovement : MonoBehaviour
            
         
 
+    }
+
+    public void MoveHierarchies(string name)
+    {
+        RectTransform imgRectT = GetChild(pieces, name);
+        imgRectT.parent = null;
+        imgRectT.parent = cappieces.transform;
+        imgRectT.GetComponent<Image>().enabled = true;
     }
 
     RectTransform GetChild(Transform t, string name)

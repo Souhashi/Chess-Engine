@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Andre/Documents/ChessBuild/ChessEngine.exe
+C:/Users/SOUHASHI/Documents/ChessBuild/ChessEngine.exe
 SceneListBegin?
 Assets/Scenes/Launcher.unity
 Assets/Scenes/ChessArena.unity

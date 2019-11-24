@@ -155,7 +155,7 @@ public class PointToGrid : MonoBehaviour
                 {
                     GameManager.Instance.RemovePieceGlobally(enemypiece.name);
                     GameManager.Instance.CapturePieceGlobally(enemypiece.name);
-
+                    PieceMovement.Instance.MoveHierarchies(enemypiece.name);
                 }
                 
                 positions = p.GetPiecePositions(point);
@@ -177,7 +177,7 @@ public class PointToGrid : MonoBehaviour
                 else
                 {
                     GameManager.Instance.UpdatePieceGlobally(point, s.name);
-                    PieceMovement.Instance.MoveImage(GameManager.Instance.currentPiece.name, tile_name);
+                    
                     
                     p.hasMovedBefore = true;
                 }

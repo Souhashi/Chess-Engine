@@ -271,15 +271,15 @@ public class GameManager : MonoBehaviour
         {
             case Player.Black:
                 GameObject piece = GameObject.Find(name);
-                wcaptured_pieces.Add(piece);
-                piece.transform.position = new Vector3(positions_white[wcaptured_pieces.Count - 1].x, piece.transform.position.y, positions_white[wcaptured_pieces.Count - 1].z);
+                piece.SetActive(false);
                 PieceMovement.Instance.DeleteImage(current_pos);
+               
                 break;
             case Player.White:
                 GameObject wpiece = GameObject.Find(name);
-                bcaptured_pieces.Add(wpiece);
-                wpiece.transform.position = new Vector3(positions_black[bcaptured_pieces.Count - 1].x, wpiece.transform.position.y, positions_black[bcaptured_pieces.Count - 1].z);
+                wpiece.SetActive(false);
                 PieceMovement.Instance.DeleteImage(current_pos);
+                
                 break;
         }
     }
@@ -342,7 +342,8 @@ public class GameManager : MonoBehaviour
                     RemovePieceGlobally(enemy.name);
                     CapturePieceGlobally(enemy.name);
                     Delete2DGlobal(enemy.name);
-                    
+                    PieceMovement.Instance.MoveHierarchies(enemy.name);
+
                 }
                 if (p.EnPassantRight && upright.x == point.x && upright.z == point.z)
                 {
@@ -351,6 +352,7 @@ public class GameManager : MonoBehaviour
                     RemovePieceGlobally(enemy.name);
                     CapturePieceGlobally(enemy.name);
                     Delete2DGlobal(enemy.name);
+                    PieceMovement.Instance.MoveHierarchies(enemy.name);
                 }
                 break;
             case Piece.Color.White:
@@ -363,6 +365,7 @@ public class GameManager : MonoBehaviour
                     RemovePieceGlobally(enemy.name);
                     CapturePieceGlobally(enemy.name);
                     Delete2DGlobal(enemy.name);
+                    PieceMovement.Instance.MoveHierarchies(enemy.name);
                 }
                 if (p.EnPassantRight && wupright.x == point.x && wupright.z == point.z)
                 {
@@ -371,6 +374,7 @@ public class GameManager : MonoBehaviour
                     RemovePieceGlobally(enemy.name);
                     CapturePieceGlobally(enemy.name);
                     Delete2DGlobal(enemy.name);
+                    PieceMovement.Instance.MoveHierarchies(enemy.name);
                 }
                 break;
         }
