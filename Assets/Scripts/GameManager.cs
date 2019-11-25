@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     public bool IsPaused;
     public Camera wp_camera, bp_camera;
     public GameObject wp, bp, player;
-    public TextMeshProUGUI gui;
+    public TextMeshProUGUI gui, checkstatus;
     int counter = 0;
     string objectname;
     
@@ -211,7 +211,7 @@ public class GameManager : MonoBehaviour
     [PunRPC]
     void SetGuiText(string text)
     {
-        gui.text = text;
+        checkstatus.text = text;
     }
 
     public void SetGUITextGlobal(string text)
@@ -720,6 +720,7 @@ public class GameManager : MonoBehaviour
                 RemovePieceGlobally(currentPiece.name);
                 AddPieceGlobally(objectname);
                 DestroySceneObject();
+                PieceMovement.Instance.SetImageSprite(currentPiece.name, piece, current_player.ToString());
                 break;
             case Player.Black:
                 Vector3 position = new Vector3(currentPiece.transform.position.x, black_pieces[piece].transform.position.y, currentPiece.transform.position.z);
@@ -727,6 +728,7 @@ public class GameManager : MonoBehaviour
                 RemovePieceGlobally(currentPiece.name);
                 AddPieceGlobally(objectname);
                 DestroySceneObject();
+                PieceMovement.Instance.SetImageSprite(currentPiece.name, piece, current_player.ToString());
                 break;
         }
     }

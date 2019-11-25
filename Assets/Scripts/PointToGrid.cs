@@ -148,7 +148,7 @@ public class PointToGrid : MonoBehaviour
         }
         if (GameManager.Instance.currentBoardStatus == GameManager.Status.PieceMoving)
         {
-            
+
             if (p != null)
             {
                 if (enemypiece != null)
@@ -157,15 +157,15 @@ public class PointToGrid : MonoBehaviour
                     GameManager.Instance.CapturePieceGlobally(enemypiece.name);
                     PieceMovement.Instance.MoveHierarchies(enemypiece.name);
                 }
-                
+
                 positions = p.GetPiecePositions(point);
                 Debug.Log(positions.Count);
                 Debug.Log(p.name);
                 DeactivateTiles();
-                if (p.piecetype == Piece.Pieces.Rook&& Input.GetKey(KeyCode.Q) && GameManager.Instance.CanCastle(s, point))
+                if (p.piecetype == Piece.Pieces.Rook && Input.GetKey(KeyCode.Q) && GameManager.Instance.CanCastle(s, point))
                 {
                     GameManager.Instance.Castle(p, point);
-                    p.hasMovedBefore = true; 
+                    p.hasMovedBefore = true;
                 }
                 if (p.piecetype == Piece.Pieces.Peon)
                 {
@@ -177,8 +177,8 @@ public class PointToGrid : MonoBehaviour
                 else
                 {
                     GameManager.Instance.UpdatePieceGlobally(point, s.name);
-                    
-                    
+
+
                     p.hasMovedBefore = true;
                 }
                 GameManager.Instance.ResetEP();
@@ -188,16 +188,20 @@ public class PointToGrid : MonoBehaviour
                 //GameManager.Instance.ResetEP();
 
                 List<GameObject> t = GameManager.Instance.IsKingInCheck();
-                    if (t.Count != 0 && GameManager.Instance.isScanComplete)
-                    {
-                      
-                                GameManager.Instance.SetCheckGlobal(true);
-                                Debug.Log("King in check " + "Player:" + GameManager.Instance.current_player);
-                                GameManager.Instance.ScanForCheckMate(GameManager.Instance.current_player, t);
-                                                  
-                    }
+                if (t.Count != 0 && GameManager.Instance.isScanComplete)
+                {
 
-                GameManager.Instance.SetCheckGlobal(false);
+                    GameManager.Instance.SetCheckGlobal(true);
+                    GameManager.Instance.SetGUITextGlobal("King in check " + "Player:" + GameManager.Instance.current_player);
+                    GameManager.Instance.ScanForCheckMate(GameManager.Instance.current_player, t);
+
+                }
+                else
+                {
+                    GameManager.Instance.SetCheckGlobal(false);
+                    GameManager.Instance.SetGUITextGlobal("All is good");
+                }
+                
                 GameManager.Instance.isScanComplete = false;
                 p.SetStatusMaterial(Piece.Status.Free);
                 if (GameManager.Instance.canBePromoted(p))

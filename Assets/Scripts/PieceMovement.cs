@@ -12,6 +12,7 @@ public class PieceMovement : MonoBehaviour
     int currentScreenheight, currentScreenwidth;
     public RectTransform board, pieces, cappieces, status;
     public float viewportwidth, viewportheight;
+    public List<Sprite> white_sprites, black_sprites;
 
     private void Awake()
     {
@@ -27,6 +28,8 @@ public class PieceMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        white_sprites = new List<Sprite>();
+        black_sprites = new List<Sprite>();
         Debug.Log(Screen.width + " " + Screen.height);
         currentScreenheight = Screen.height;
         currentScreenwidth = Screen.width;
@@ -131,6 +134,20 @@ public class PieceMovement : MonoBehaviour
         imgRectT.parent = null;
         imgRectT.parent = cappieces.transform;
         imgRectT.GetComponent<Image>().enabled = true;
+    }
+
+    public void SetImageSprite(string name, int spriteindex, string player)
+    {
+        RectTransform image = GetChild(pieces, name);
+        if (player == "White")
+        {
+            image.GetComponent<Image>().sprite = white_sprites[spriteindex];
+        }
+        else
+        {
+            image.GetComponent<Image>().sprite = black_sprites[spriteindex];
+        }
+        
     }
 
     RectTransform GetChild(Transform t, string name)

@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/SOUHASHI/Documents/ChessBuild/ChessEngine.exe
+C:/Users/Andre/Documents/ChessBuild/ChessEngine.exe
 SceneListBegin?
 Assets/Scenes/Launcher.unity
 Assets/Scenes/ChessArena.unity
@@ -166,7 +166,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 b25c2463ba9144686d18d7707733226b Assembly-CSharp.dll:.NamePickGui
 24f79094aff162c9aa69c31d64d777d3 PhotonUnityNetworking.Utilities.dll:Photon.Pun.UtilityScripts.OnClickRpc
 71bb6a6b6c8f052f948db64c7dd3ca4f PhotonUnityNetworking.Utilities.dll:Photon.Pun.UtilityScripts.PunPlayerScores
-e31d7218ac63412e408b87181f0dd28d Assembly-CSharp.dll:.GameManager
+4c4c254b687dff0129e4749818276306 Assembly-CSharp.dll:.GameManager
 e7aa62e1f291228958626e122c23c8f0 PhotonUnityNetworking.Utilities.dll:Photon.Pun.UtilityScripts.ConnectAndJoinRandom
 1aec3137280638278bc9bcbe5b3bc1b3 PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo.Cockpit.PunCockpitEmbed
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
