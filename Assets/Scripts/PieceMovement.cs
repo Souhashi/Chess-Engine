@@ -141,11 +141,11 @@ public class PieceMovement : MonoBehaviour
         RectTransform image = GetChild(pieces, name);
         if (player == "White")
         {
-            image.GetComponent<Image>().sprite = white_sprites[spriteindex];
+            image.GetComponent<Image>().sprite = white_sprites[spriteindex-1];
         }
         else
         {
-            image.GetComponent<Image>().sprite = black_sprites[spriteindex];
+            image.GetComponent<Image>().sprite = black_sprites[spriteindex-1];
         }
         
     }

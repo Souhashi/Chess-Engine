@@ -2201,7 +2201,7 @@ RectTransform:
   - {fileID: 2109063357}
   - {fileID: 40558760}
   m_Father: {fileID: 389971747}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3592,10 +3592,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 218945830}
   - {fileID: 1854515063}
   - {fileID: 602925508}
   - {fileID: 1601934026}
+  - {fileID: 218945830}
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5128,7 +5128,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 389971747}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11991,7 +11991,7 @@ MonoBehaviour:
   isBlackPlayerinCheck: 0
   isWhitePlayerinCheck: 0
   isScanComplete: 0
-  PromotionGUI: {fileID: 389971743}
+  PromotionGUI: {fileID: 218945829}
   IsPaused: 0
   wp_camera: {fileID: 0}
   bp_camera: {fileID: 0}
@@ -12413,7 +12413,7 @@ RectTransform:
   - {fileID: 7742107}
   - {fileID: 182717924}
   m_Father: {fileID: 389971747}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -14780,7 +14780,7 @@ RectTransform:
   - {fileID: 8011625989340046779}
   - {fileID: 212186082}
   m_Father: {fileID: 389971747}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
