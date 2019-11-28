@@ -28,8 +28,7 @@ public class PieceMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        white_sprites = new List<Sprite>();
-        black_sprites = new List<Sprite>();
+       
         Debug.Log(Screen.width + " " + Screen.height);
         currentScreenheight = Screen.height;
         currentScreenwidth = Screen.width;
@@ -141,10 +140,14 @@ public class PieceMovement : MonoBehaviour
         RectTransform image = GetChild(pieces, name);
         if (player == "White")
         {
+            DeleteImageWithName(name);
+            Debug.Log(spriteindex - 1);
             image.GetComponent<Image>().sprite = white_sprites[spriteindex-1];
         }
         else
         {
+            DeleteImageWithName(name);
+            Debug.Log(spriteindex - 1);
             image.GetComponent<Image>().sprite = black_sprites[spriteindex-1];
         }
         
