@@ -678,6 +678,33 @@ public class GameManager : MonoBehaviour
         Destroy(currentPiece);
     }
 
+    [PunRPC]
+    void SwapSprite(int piece)
+    {
+        PieceMovement.Instance.SetImageSprite(currentPiece.name, piece, current_player.ToString());
+    }
+
+    [PunRPC]
+    void ChangeName(string previous, string current)
+    {
+        GameObject piece = GameObject.Find(previous);
+        piece.name = current;
+
+    }
+
+    void ChangeNameGlobal(string oldname, string newname)
+    {
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("ChangeName", RpcTarget.All,oldname, newname);
+    }
+
+
+    public void SwapSpriteGlobal(int piece)
+    {
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("SwapSprite", RpcTarget.All, piece);
+    }
+
     void DestroySceneObject()
     {
         PhotonView photonView = PhotonView.Get(this);
@@ -711,6 +738,7 @@ public class GameManager : MonoBehaviour
 
     public void SwapPiece(int piece)
     {
+        string oldname = currentPiece.name;
         Debug.Log("Piece swapped");
         switch (current_player)
         {
@@ -720,7 +748,9 @@ public class GameManager : MonoBehaviour
                 RemovePieceGlobally(currentPiece.name);
                 AddPieceGlobally(objectname);
                 DestroySceneObject();
-                PieceMovement.Instance.SetImageSprite(currentPiece.name, piece, current_player.ToString());
+                SwapSpriteGlobal(piece);
+                ChangeNameGlobal(objectname, oldname);
+               
                 break;
             case Player.Black:
                 Vector3 position = new Vector3(currentPiece.transform.position.x, black_pieces[piece].transform.position.y, currentPiece.transform.position.z);
@@ -728,7 +758,8 @@ public class GameManager : MonoBehaviour
                 RemovePieceGlobally(currentPiece.name);
                 AddPieceGlobally(objectname);
                 DestroySceneObject();
-                PieceMovement.Instance.SetImageSprite(currentPiece.name, piece, current_player.ToString());
+                SwapSpriteGlobal(piece);
+                ChangeNameGlobal(objectname, oldname);
                 break;
         }
     }

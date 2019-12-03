@@ -52,5 +52,7 @@ MonoBehaviour:
   - MoveImage
   - Update2D
   - Delete2D
+  - SwapSprite
+  - ChangeName
   DisableAutoOpenWizard: 1
   ShowSettings: 0
