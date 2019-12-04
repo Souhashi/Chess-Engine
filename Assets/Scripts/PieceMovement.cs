@@ -95,6 +95,7 @@ public class PieceMovement : MonoBehaviour
 
     public void MoveImage(string name, string position)
     {
+        Debug.Log("I am firing");
         RectTransform posRectT = GetChild(board, position);
         RectTransform imgRectT =GetChild(pieces, name);
 

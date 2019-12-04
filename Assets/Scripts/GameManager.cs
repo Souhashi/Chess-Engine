@@ -85,21 +85,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void UpdatePieceGlobally(Vector3 np, string name)
+    public void UpdatePieceGlobally(Vector3 np, string name, string globalname)
     {
         PhotonView photonView = PhotonView.Get(this);
         Debug.Log("PRC RUN");
-        photonView.RPC("SetPiece", RpcTarget.All, np, name);
+        photonView.RPC("SetPiece", RpcTarget.All, np, name, globalname);
         
     }
 
     [PunRPC]
-    void SetPiece(Vector3 newpos, string name)
+    void SetPiece(Vector3 newpos, string name, string globalname)
     {
         GameObject piece = GameObject.Find(name);
         Vector3 newp = new Vector3(newpos.x, piece.transform.position.y, newpos.z);
         piece.transform.position = newp;
-        PieceMovement.Instance.MoveImage(name, current_pos);
+        PieceMovement.Instance.MoveImage(globalname, current_pos);
     }
 
     [PunRPC]
@@ -937,15 +937,15 @@ public class GameManager : MonoBehaviour
         if (rook.transform.position.x == 1 && castlemoveOO.x == point.x && castlemoveOO.z == point.z)
         {
             Debug.Log("CastleK");
-            UpdatePieceGlobally(castlemoveOO, p.name);
-            UpdatePieceGlobally(castlemovekOO, p1.name);
+            UpdatePieceGlobally(castlemoveOO, p.name, currentPiece.name);
+            UpdatePieceGlobally(castlemovekOO, p1.name, currentPiece.name);
             Set2DGlobal(p1.name, "g1");
         }
         else if (rook.transform.position.x == 8 && castlemoveOOO.x == point.x && castlemoveOOO.z == point.z)
         {
             Debug.Log("CastleQ");
-            UpdatePieceGlobally(castlemoveOOO, p.name);
-            UpdatePieceGlobally(castlemovekOOO, p1.name);
+            UpdatePieceGlobally(castlemoveOOO, p.name, currentPiece.name);
+            UpdatePieceGlobally(castlemovekOOO, p1.name, currentPiece.name);
                     Set2DGlobal(p1.name, "c1");
         }
                 break;
@@ -958,15 +958,15 @@ public class GameManager : MonoBehaviour
                 if (rook.transform.position.x == 1 && castlemoveOO.x == point.x && castlemoveOO.z == point.z)
                 {
                     Debug.Log("CastleK");
-                    UpdatePieceGlobally(castlemoveOO, p.name);
-                    UpdatePieceGlobally(bcastlemovekOO, bp1.name);
+                    UpdatePieceGlobally(castlemoveOO, p.name, currentPiece.name);
+                    UpdatePieceGlobally(bcastlemovekOO, bp1.name, currentPiece.name);
                     Set2DGlobal(bp1.name, "g8");
                 }
                 else if (rook.transform.position.x == 8 && castlemoveOOO.x == point.x && castlemoveOOO.z == point.z)
                 {
                     Debug.Log("CastleQ");
-                    UpdatePieceGlobally(castlemoveOOO, p.name);
-                    UpdatePieceGlobally(bcastlemovekOOO, bp1.name);
+                    UpdatePieceGlobally(castlemoveOOO, p.name, currentPiece.name);
+                    UpdatePieceGlobally(bcastlemovekOOO, bp1.name, currentPiece.name);
                     Set2DGlobal(bp1.name, "c8");
                 }
                 break;

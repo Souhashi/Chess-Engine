@@ -70,6 +70,7 @@ public class PointToGrid : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 s = GameManager.Instance.GetPieceAtLocation(point);
+                //Debug.Log(s.name);
                 if (s != null)
                 {
                     p = s.GetComponent<Piece>();
@@ -170,13 +171,13 @@ public class PointToGrid : MonoBehaviour
                 if (p.piecetype == Piece.Pieces.Peon)
                 {
                     GameManager.Instance.isAboutToEP(p, point);
-                    GameManager.Instance.UpdatePieceGlobally(point, s.name);
+                    GameManager.Instance.UpdatePieceGlobally(point, s.name, GameManager.Instance.currentPiece.name);
                     //p.SetPiece(point);
                     p.hasMovedBefore = true;
                 }
                 else
                 {
-                    GameManager.Instance.UpdatePieceGlobally(point, s.name);
+                    GameManager.Instance.UpdatePieceGlobally(point, s.name, GameManager.Instance.currentPiece.name);
 
 
                     p.hasMovedBefore = true;
