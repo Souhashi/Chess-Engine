@@ -45,6 +45,18 @@ namespace Photon.Pun.Demo.PunBasics
             ConnectToPhoton();
         }
 
+        IEnumerator Retry()
+        {
+            while (!PhotonNetwork.IsConnected)
+            {
+                PhotonNetwork.Reconnect();
+                Debug.Log("Retrying...");
+            }
+            
+            yield return new WaitForSeconds(1);
+            
+        }
+
         private void Awake()
         {
             PhotonNetwork.AutomaticallySyncScene = true;
@@ -74,7 +86,7 @@ namespace Photon.Pun.Demo.PunBasics
                 SetPlayerName(playerNameField.text);
                 SetRoomName(roomNameField.text);
                 PhotonNetwork.LocalPlayer.NickName = playerName;
-                Debug.Log("PhotonNetwork.IsConnected | Trying to Create/Join Room" + roomNameField.text);
+                Debug.Log("PhotonNetwork.IsConnected | Trying to Create/Join Room " + roomNameField.text);
                 RoomOptions roomOptions = new RoomOptions();
                 TypedLobby typedLobby = new TypedLobby(roomName, LobbyType.Default);
                 PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, typedLobby);
@@ -109,6 +121,9 @@ namespace Photon.Pun.Demo.PunBasics
             isConnecting = false;
             controlPanel.SetActive(true);
             Debug.Log("Disconnected. Please check your Internet connection");
+            connectionStatus.text = "Disconnected. Retrying...";
+            connectionStatus.color = Color.red;
+            StartCoroutine(Retry());
         }
 
         public override void OnJoinedRoom()
